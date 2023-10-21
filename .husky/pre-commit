@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+# . "$(dirname -- "$0")/_/husky.sh"
+
+# echo "🟡 pre commit the application start build 🟡🟡"
+# echo "🟧build financial app 🟧"
+# npx nx build financial
+# echo "financial app build succesfuly 🟢"
+# # echo "build dashboard app 🟢"
+# # npx nx build dashboard
+
+# # echo "build micro finance app 🟢"
+# # npx nx build micro-finance
+
+# echo "🟢🟢🟢 All build done well 🟢🟢🟢"

@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🟡 pre push the application start build 🟡🟡"
+echo "Build HR App 🟧"
+npx nx run hr:build
+echo "HR app build succesfuly 🟢"
+echo "🟢🟢🟢 All build done well 🟢🟢🟢"

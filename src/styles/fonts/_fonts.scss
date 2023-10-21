@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Graphik Arabic";
+    src: url("../../../public/fonts/Graphik-fonts/GraphikArabic-Regular.eot");
+    src:
+        local("../../../public/fonts/Graphik-fonts/GraphikArabic-Regular"),
+        local("../../../public/fonts/Graphik-fonts/GraphikArabic-Regular"),
+        url("../../../public/fonts/Graphik-fonts/GraphikArabic-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../../../public/fonts/Graphik-fonts/GraphikArabic-Regular.woff2") format("woff2"),
+        url("../../../public/fonts/Graphik-fonts/GraphikArabic-Regular.woff") format("woff"),
+        url("../../../public/fonts/Graphik-fonts/GraphikArabic-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// inter font
+@font-face {
+    font-family: "Inter";
+    src: url("../../../public/fonts/Inter/Inter-Regular.ttf");
+    src: url("../../../public/fonts/Inter/Inter-Black.ttf");
+    src: url("../../../public/fonts/Inter/Inter-ExtraBold.ttf");
+    src: url("../../../public/fonts/Inter/Inter-Bold.ttf");
+    src: url("../../../public/fonts/Inter/Inter-SemiBold.ttf");
+    src: url("../../../public/fonts/Inter/Inter-Thin.ttf");
+    src: url("../../../public/fonts/Inter/Inter-Light.ttf");
+    src: url("../../../public/fonts/Inter/Inter-ExtraLight.ttf");
+    src: url("../../../public/fonts/Inter/Inter-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

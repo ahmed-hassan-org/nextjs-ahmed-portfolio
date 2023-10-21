@@ -1,0 +1,380 @@
+{
+    "paymentLoading": "Please wait, confirming...",
+    "paymentSuccess": "Payment successfully confirmed.",
+    "paymentFail": "Purchase failed.",
+    "paymentSupport": "Please contact the technical supervisor for assistance.",
+    "paymentRedirect": "You will be redirected in a few seconds.",
+    "SAR": "SAR",
+    "search": "Search",
+    "fieldRequired": "This field is required",
+    "newsletterMessage": "Thank you for subscribing to our newsletter!",
+    "yousubscribed": "You're subscribed, Book Now!",
+    "rebook": "Rebook",
+    "logout": "Log out",
+    "seeDetails": "See Details",
+    "seo":{
+        "desc":{
+          "home_desc":"Home desc goes here",
+          "about_desc":"About desc goes here",
+          "blog_desc":"Blog desc goes here",
+          "contact_desc":"Contact desc goes here",
+          "course_desc":"Courses desc goes here",
+          "policy_desc":"Privacy desc goes here",
+          "terms_desc":"Terms desc goes here",
+          "dashboard_desc":"Dashboard desc goes here"
+        }
+      },
+    "nav": {
+        "home": "Home",
+        "workshops": "Workshops",
+        "aboutus": "About Us",
+        "contact": "Contact",
+        "signup": "Sign Up",
+        "blog": "Blog",
+        "whoarewe": "Who are we",
+        "courses": "Courses",
+        "bookfreeCall": "Book a free sessions",
+        "getYourFreeCall": "Get your free session",
+        "registerNew": "Register as a new trainee",
+        "policy":"Privacy Policy",
+        "terms":"Terms And Conditions",
+        "dashboard":"Dashboard"
+    },
+    "footer": {
+        "product": "Product",
+        "company": "Company",
+        "title": "We are a Saudi Company, based in Jeddah, we’ve been conducting various market researchers for the past years. We are about to implement a platform that specializes in motorcycling to enhance your experience.",
+        "workshops": "Workshops",
+        "news": "News",
+        "blogs": "Blogs",
+        "aboutus": "About Us",
+        "helpsupport": "Help & Support",
+        "contact": "Contact",
+        "policy": "Privacy Policy",
+        "terms": "Terms And Conditions",
+        "cookies": "Cookie Setting",
+        "followus": "Follow Us",
+        "copyrights": "© 2023 Bikerz. All rights reserved.",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "whatsapp": "Whatsapp"
+    },
+    "signUp": {
+        "title": "Create a new account",
+        "sub-title": "At Bikers, we are more than just a company – we are a community of motorcycle enthusiasts committed to education, safety, innovation, excellence and community.",
+        "form": {
+            "name": "Full Name",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "password": " password"
+        },
+        "button": "Create an account",
+        "offerTitle": "Summer Offer",
+        "pastPrice": "2800 ",
+        "offer": "2490 ",
+        "close": "Close",
+        "haveAnAccount": "Do you already have an account? ",
+        "signin": "Sign in",
+        "validationErrors": {
+            "nameMissing": "Please enter your name",
+            "phoneInvalid": "Please enter a valid phone number",
+            "phoneMissing": "Please enter your mobile number",
+            "emailInvalid": "Please enter a valid email address",
+            "emailMissing": "Please enter your email address",
+            "passwordMissing": "Please enter password"
+        },
+        "responses": {
+            "success": "Your data has been successfully received. You will be redirected to the payment page in a few seconds.",
+            "userExists": "This user already exists.",
+            "genericError": "Please check the accuracy of the data."
+        }
+    },
+    "signIn": {
+        "title": "Sign in",
+        "haveNoAccount": "Don't have an account?",
+        "responses": {
+            "success": "You have been logged in successfully",
+            "userNotFound": "This account was not found",
+            "genericError": "Please check the accuracy of the data."
+        }
+    },
+    "courses": {
+        "courses": "Courses",
+        "showmore": "Show More",
+        "showless": "Show Less",
+        "whatyoulearn": "What You Will Learn",
+        "courseincludes": "This course includes",
+        "aboutworkshop": "About Workshop",
+        "curriculum": "Workshop Curriculum",
+        "reviews": "Reviews",
+        "noReviews": "No Reviews",
+        "viewall": "View all",
+        "relatedworkshops": "Related Workshops",
+        "buynow": "Buy Now",
+        "coursepreview": "Course Preview"
+    },
+    "offers": {
+        "offersForYou": "Offers for you",
+        "save50%": "Save 50%",
+        "fullCourse": "Full Course",
+        "allWorkshops": "All Workshops",
+        "saveMore": "Save more by choosing the package you need.",
+        "contactUs": "Contact Us",
+        "allCoursesIncluded": "All courses included",
+        "costSaving": "Cost saving",
+        "timeSaving": "Time saving",
+        "flexibility": "Flexibility",
+        "joinBikerz": " Join Bikerz community to engage, learn, and grow with unique experience",
+        "attendEachOnline": "You can attend each online workshop up-to 3 times free of charge within 3 months",
+        "physicalTraining": "Physical training (Develop the essential 6 skills)",
+        "masterYourBike": "Master your bike ",
+        "rideLegally": "Ride legally ",
+        "rightAttitude": "Right attitude ",
+        "thinkWhatIf": "Think what if (2 Hours online workshop)",
+        "selectYourBikeWisely": "  Select your first bike wisely "
+    },
+    "curriculum": {
+        "budgetConsideration": {
+            "title": "Budget Considerations",
+            "topics": {
+                "subtopic1": "Understand your budget and plan your purchasing timeline.",
+                "subtopic2": "Learn about 150 brand new motorcycles available in the Saudi Market.",
+                "subtopic3": "Learn about the price range (SR 10,000 to SR 250,000) for new motorcycles in Saudi Arabia."
+            }
+        },
+        "analyzingPurposeIntendedUse": {
+            "title": "Analyzing Purpose, Intended Use, and Understanding Different Types of Motorcycles",
+            "topics": {
+                "subtopic1": "Identify the primary use of your future bike and understand various motorcycle types.",
+                "subtopic2": "Learn to compare different motorcycles and their features effectively."
+            }
+        },
+        "personalPreferencesStyle": {
+            "title": "Personal Preferences & Style",
+            "topics": {
+                "subtopic1": "Explore how personal preferences, physical fitness, and brand choice influence your decision.",
+                "subtopic2": "Understand the importance of local dealer availability and maintenance requirements."
+            }
+        },
+        "performanceRiskTolerance": {
+            "title": "Performance and Risk Tolerance",
+            "topics": {
+                "subtopic1": "Learn about various safety features and decide on your preferred accessories.",
+                "subtopic2": "Understand how to evaluate the value for money and negotiate effectively when buying a motorcycle.",
+                "subtopic3": "Gain insights into the engine power/HP/CC and understand your risk tolerance.",
+                "subtopic4": "Make your final decision about the motorcycle purchase, free from fear of judgment or making a wrong choice."
+            }
+        }
+    },
+    "termsandconditions": {
+        "termsandconditions": "Terms and conditions",
+        "title": "Welcome to our matchmaking platform for online and physical training (the 'Platform'). The following terms and conditions (the 'Terms') govern your access  and use of our Platform, including any content and services offered on or through the Platform.",
+        "table": "Table of contents",
+        "acceptance": {
+            "title": "Acceptance of the Terms",
+            "subtopic1": "By using the Platform, you accept and agree to be bound and abide by these Terms. If you do not agree to these Terms, you must not access or use the Platform."
+        },
+        "changes": {
+            "title": "Changes to the Terms",
+            "subtopic1": "We may revise and update these Terms from time to time in our sole discretion. All changes are effective immediately when we post them and apply to all access to and use of the Platform there after."
+        },
+        "accessing": {
+            "title": "Accessing the Platform",
+            "subtopic1": "We reserve the right to withdraw or amend the Platform, and any service or material we provide on the Platform, in our sole discretion without notice."
+        },
+        "contributions": {
+            "title": "User Contributions and Transactions",
+            "subtopic1": "The Platform may contain user profiles, training course listings, course reviews, and other interactive features. These allow users to post, submit, publish, display or transmit content, and importantly, purchase training courses offered by trainers.",
+            "subtopic2": "All user contributions, including purchases, must comply with our content and transaction standards. By making a purchase, you agree to abide by the terms, conditions, and payment obligations associated with that purchase.",
+            "subtopic3": "Trainers offering courses on the Platform are responsible for complying with all applicable laws and regulations related to their course content and transactions. This includes but is not limited to ensuring the accuracy of course descriptions, appropriate handling of customer transactions, and providing reliable customer support related to their courses."
+        },
+        "prohibited": {
+            "title": "Prohibited Uses",
+            "subtopic1": "You may not use the Platform for any purpose that is illegal or prohibited by these Terms. Prohibited uses include, but are not limited to, using the Platform in any way that violates any applicable local or international law or regulation."
+        },
+        "disclaimer": {
+            "title": "Disclaimer of Warranties",
+            "subtopic1": "Your use of the Platform is at your own risk. The Platform is provided on an 'as is' and 'as available' basis, without any warranties of any kind, either express or implied."
+        },
+        "limitation": {
+            "title": "Limitation of Liability",
+            "subtopic1": "To the maximum extent permitted by law, in no event will we be liable for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, the Platform."
+        },
+        "governing": {
+            "title": "Governing Law and Jurisdiction",
+            "subtopic1": "These Terms and any dispute or claim arising out of, or related to them, shall be governed by and construed in accordance with the internal laws of [Kingdom of Saudi Arabia]."
+        },
+        "contactus": {
+            "title": "Contact us",
+            "subtopic1": "If you have any questions about this privacy policy or our privacy practices, please contact us at Email",
+            "phone": "Phone",
+            "address": "address",
+            "theaddress": "Saudi Arabia - Jeddah - Andalus street",
+            "weverecieved": "We've received your message and will contact you soon"
+        }
+    },
+    "privacypolicy": {
+        "current": "Current as of today",
+        "privacypolicy": "Privacy Policy",
+        "title": "Welcome to our matchmaking platform for online and physical training (the 'Platform'). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we handle your personal data, your privacy rights, and how the law protects you.",
+        "datacollect": {
+            "title": "Data We Collect",
+            "topic": "We may collect, use, store and transfer the following kinds of personal data about you:",
+            "subtopic1": "1. Identity Data: Includes first name, last name, and gender.",
+            "subtopic2": "2. Contact Data: Includes email address and telephone numbers.",
+            "subtopic3": "3. Technical Data: Includes internet protocol (IP) address, your login data, browser type and version, and other technology on the devices you use to access the Platform.",
+            "subtopic4": "4. Profile Data: Includes your interests, preferences, training data, feedback and survey responses."
+        },
+        "datause": {
+            "title": "How We Use Your Data",
+            "topic": "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:",
+            "subtopic1": "1.  Register you as a new customer and manage your account.",
+            "subtopic2": "2. To provide and improve our services.",
+            "subtopic3": "3. To manage our relationship with you, including notifying you about changes to our terms or privacy policy.",
+            "subtopic4": "4. To enable you to participate in a prize draw, competition or complete a survey."
+        },
+        "disclosures": {
+            "title": "Disclosures of Your Personal Data",
+            "subtopic1": "We may share your personal data with external third parties only in the ways that are described in this privacy policy. We do not sell your personal data to third parties."
+        },
+        "security": {
+            "title": "Data Security",
+            "subtopic1": "We have implemented appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed."
+        },
+        "retention": {
+            "title": "Data Retention",
+            "subtopic1": "We will only retain your personal data for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.            "
+        },
+        "rights": {
+            "title": "Your Legal Rights",
+            "subtopic1": "Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to access, correct, or delete your personal data."
+        },
+        "limitation": {
+            "title": "Limitation of Liability",
+            "subtopic1": "To the maximum extent permitted by law, in no event will we be liable for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, the Platform."
+        },
+        "governing": {
+            "title": "Governing Law and Jurisdiction",
+            "subtopic1": "These Terms and any dispute or claim arising out of, or related to them, shall be governed by and construed in accordance with the internal laws of [Kingdom of Saudi Arabia]."
+        },
+        "changes": {
+            "title": "Changes to This Privacy Policy",
+            "subtopic1": "We reserve the right to update this privacy policy at any time, and we will provide you with a new privacy policy when we make any substantial updates."
+        },
+        "contactus": {
+            "title": "Contact us",
+            "subtopic1": "If you have any questions about this privacy policy or our privacy practices, please contact us at Email:",
+            "phone": "Phone",
+            "address": "address",
+            "theaddress": "Saudi Arabia - Jeddah - Andalus street"
+        }
+    },
+    "contact": {
+        "contactus": "Contact us",
+        "title": "Our friendly team would love to hear from you.",
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "email": "Email",
+        "phonenumber": "Phone number",
+        "message": "Message",
+        "leaveusmessage": "Leave us a message...",
+        "sendmessage": "Send Message"
+    },
+    "about": {
+        "aboutbikerz": "About Bikerz",
+        "title": "Welcome to Bikerz, your trusted companion in the world of motorcycling.",
+        "aboutcontent": "We are more than just a platform; we are a community, a mentor, a guide, and a friend to motorcycling enthusiasts in Saudi Arabia and beyond. Serving as a matchmaker, we connect first-time riders with qualified trainers for both online workshops and physical training. In addition, we foster mentorship by pairing new riders with experienced mentors. We are dedicated to transforming the way people learn, connect, and experience motorcycling. We're not just here to help you ride; we're here to help you master the art.",
+        "vision": "Bikerz vision",
+        "visioncontent": "Our vision is to be the leading platform for motorcycling enthusiasts, providing unique, high-quality services that embrace the interests of our users and accommodate their schedules. We aim to inspire you, provide you with the knowledge and skills you need, and guide you on your journey towards mastery.",
+        "mission": "Bikerz mission",
+        "missioncontent": "Our mission is to empower you to live the motorcycle lifestyle you've always dreamed of. We provide comprehensive solutions for learning, buying, selling, and living the motorcycle lifestyle. As a matchmaker, we connect you with qualified trainers for online workshops and physical training, and with mentors who can guide you through your journey. From helping you select the right bike to teaching you about motorcycle laws, developing the right attitude, preparing you for road scenarios, honing your skills, and mastering your bike, we've got you covered. Each of our services is designed to guide you from the stage of confusion or inexperience to a stage of clarity, competence, and expertise.",
+        "happycustomer": "Happy customer",
+        "workshopcompleted": "Workshops completed",
+        "whyweexist": "Why we exist",
+        "whyweexistcontent": "We exist because we believe in the transformative power of motorcycling and the community it fosters. We believe in education, safety, and the power of community. We cater to professional men and women seeking a unique service that respects their interests and accommodates their schedules. We prioritize your safety above all else and provide a platform for you to connect, share experiences, and grow together on your motorcycling journey. We're here to guide you every step of the way on your journey towards mastery on two wheels. We exist to make your motorcycling dreams a reality."
+    },
+    "blogs": {
+        "blogs": "Stories and blogs",
+        "blogNotFound": "Blog not found",
+        "minsRead": "mins read",
+        "subscribe": "Subscribe to learn about new product features, the latest in technology, solutions, and updates.",
+        "enteremail": "Enter your email",
+        "wecare": "We care about your data in our privacy policy.",
+        "Subscribe": "Subscribe",
+        "share":"Share",
+        "categories": {
+            "first": "View all",
+            "second": "Tips",
+            "third": "News",
+            "fourth": "Community"
+        },
+        "readmore": "Read More",
+        "previous": "Previous",
+        "next": "Next",
+        "written": "Written by",
+        "published": "Published on",
+        "copy": "Copy link",
+        "introduction": "Introduction",
+        "tool": "Tool",
+        "resources": "Other resources",
+        "conclusion": "Conclusion"
+    },
+    "userdashboard": {
+        "packages": "Packages and offers",
+        "fulltraining": "Full training offer",
+        "fulltraininginfo": "Full training in the field plus full theoretical training",
+        "practicaltraining": "Practical Training",
+        "theoreticaltraining": "Theoretical training",
+        "buyfullcourses": "Buy the full package for",
+        "theoreticalsessions": "Theoretical sessions offer",
+        "theroticalsessionsinfo": "Theoretical training is divided into four batches",
+        "firstsession": "First Session",
+        "secondsession": "Second Session",
+        "thirdsession": "Third Session",
+        "fourthsession": "Fourth Session",
+        "first": "First: Practical training",
+        "startwith": "Start it with 6 hours of hands-on training",
+        "startwithinfo": "The workshop will help you develop 18 behaviors that will enhance your motorcycle lifestyle as well as get the most out of your riding journey.",
+        "second": "Second: Theoretical guidance",
+        "introvideo": "Watch an introductory video",
+        "buyworkshop": "Purchase Workshop",
+        "watchallbenefits": "Leave a review",
+        "buynow": "Buy Now",
+        "splitOnFour": "Split on four payments"
+    },
+    "home": {
+        "bestworkshops": "The best educational workshops",
+        "learnHowToDrive": "Learn to ride bikes with us!",
+        "inBikerz": "At Bikers, we're more than just a company – we're a community of enthusiasts For motorcycle enthusiasts who are committed to education, safety, innovation and excellence And belonging to the community, in addition to clarity, professionalism and uniqueness.",
+        "discount": "You will get a discount when you create an account",
+        "unforgottable": "Unforgettable moments with Bikers",
+        "community": "At Bikers, we are more than just a company – we are a community of motorcycle enthusiasts committed to education, safety, innovation, excellence and community.",
+        "onlineworkshops": "Online workshops",
+        "bikerscommunity": "Bikers Community",
+        "practical": "Practical Training",
+        "specialists": "Get to know our bikers specialists!",
+        "communityextended": "At Bikers, we are more than just a company – we are a community of motorcycle enthusiasts committed to education, safety, innovation, excellence and community, as well as clarity, professionalism and individuality.",
+        "bookacall": "Book a free call",
+        "viewworkshops": "View all workshops",
+        "startit": "Start it by booking a",
+        "free": "free",
+        "startitextended": "call with one of our professional trainers",
+        "onlinelecture": "In this lecture, you can talk to one of the trainers without having to register to ask him about the methods that you can follow to learn to drive correctly and inquire about anything that comes to your mind regarding driving. Register now so you can have this experience!",
+        "plans": "Bikerz plans",
+        "buyNow": "Buy now",
+        "trainee": "Trainee",
+        "trainingWorkshops": "Training workshops",
+        "gathering": "Gathering",
+        "trainer": "Trainer"
+    },
+    "trainerprofile": {
+        "statistics": "Statistics about the coach",
+        "workshops": "Number of training workshops",
+        "level": "Level",
+        "map": "Map",
+        "info": "Information about the coach",
+        "photos": "Pictures of the coach from training",
+        "reviews": "Customer opinions",
+        "iam": "I'm"
+    }
+}
