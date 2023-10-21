@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 import PorofileLogoLight from "../icons/PorofileLogoLight";
 import ProfileLogoDark from "../icons/ProfileLogoDark";
@@ -7,7 +7,7 @@ import ProfileLogoDark from "../icons/ProfileLogoDark";
 const Navbar = () => {
   const [themeMode, setThemeMode] = useState("light");
 
-  const onButtonClick = () => {
+  const downloadPdfCv = () => {
     const pdfUrl = "../../../public/AhmedHassan.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
@@ -27,27 +27,36 @@ const Navbar = () => {
 
   const toggleDark = () => {
     setThemeMode(themeMode === "light" ? "dark" : "light");
-    localStorage.setItem("color-theme", themeMode ?? "light");
+
+    themeMode === "dark"
+      ? window.document.body.classList.add("dark")
+      : window.document.body.classList.remove("dark");
   };
+
+  useEffect(() => {
+    const theme = (localStorage.getItem("color-theme") as string) ?? "light";
+    theme === "dark" ? window.document.body.classList.add("dark") : null;
+    setThemeMode(theme);
+  }, []);
 
   return (
     <>
       <nav
-        className="sticky top-0 z-50 flex w-full flex-nowrap items-center justify-between bg-white py-2 text-xl  text-gray-500 shadow-md hover:text-gray-700 focus:text-gray-600 dark:bg-gray-900 lg:flex-wrap lg:justify-start lg:py-4 mb-10"
+        className="sticky top-0 z-50 flex w-full flex-nowrap items-center justify-between bg-gray-50 py-2 text-xl  text-gray-500 hover:text-gray-700 focus:text-gray-600 dark:bg-gray-900 lg:flex-wrap lg:justify-start lg:py-4"
         data-te-navbar-ref
       >
         <div className="flex w-full flex-wrap items-center justify-between px-6">
           <div className="mx-2">
-            <a className="text-xl text-neutral-100" href="#">
+            <a className="text-xl text-gray-100" href="#">
               {themeMode === "light" ? (
-                <PorofileLogoLight />
-              ) : (
                 <ProfileLogoDark />
+              ) : (
+                <PorofileLogoLight />
               )}
             </a>
           </div>
           <button
-            className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-gray-200 lg:hidden"
             type="button"
             data-te-collapse-init
             data-te-target="#navbarSupportedContent8"
@@ -131,11 +140,11 @@ const Navbar = () => {
               </li>
             </ul>
             <span className="mx-4" onClick={toggleDark}>
-              {themeMode === "light" ? <BiSun /> : <BiMoon />}
+              {themeMode === "light" ? <BiMoon /> : <BiSun />}
             </span>
             <button
-              className="inline-block rounded bg-neutral-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-neutral-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-neutral-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:bg-neutral-900 dark:shadow-[0_4px_9px_-4px_#030202] dark:hover:bg-neutral-900 dark:hover:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)]"
-              onClick={onButtonClick}
+              className="inline-block rounded bg-gray-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:bg-gray-100 dark:text-gray-900 dark:shadow-[0_4px_9px_-4px_#030202] dark:hover:bg-gray-600 dark:hover:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)]"
+              onClick={downloadPdfCv}
             >
               Download CV
             </button>

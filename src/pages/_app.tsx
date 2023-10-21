@@ -5,22 +5,22 @@ import "swiper/css/navigation";
 import "react-toastify/dist/ReactToastify.css";
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
-import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 
 function App({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    // localStorage.setItem("color-theme", "light");
-    if (
-      localStorage.getItem("color-theme") === "dark" ||
-      (!("color-theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
+  // useEffect(() => {
+  //   // localStorage.setItem("color-theme", "light");
+  //   if (
+  //     localStorage.getItem("color-theme") === "dark" ||
+  //     (!("color-theme" in localStorage) &&
+  //       window.matchMedia("(prefers-color-scheme: dark)").matches)
+  //   ) {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // }, []);
+
   return (
     <main suppressHydrationWarning>
       <Providers>

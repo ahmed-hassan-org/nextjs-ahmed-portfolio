@@ -6,8 +6,8 @@ import {
 } from "react-icons/bi";
 const Footer = () => {
   return (
-    <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
-      <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+    <footer className="bg-white text-center text-gray-600 dark:bg-gray-900 dark:text-gray-200 lg:text-left">
+      <div className="flex items-center justify-center border-b-2 border-gray-200 p-6 dark:border-gray-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
           <span>Get connected with me on social networks:</span>
         </div>
@@ -15,31 +15,25 @@ const Footer = () => {
         <div className="flex justify-center">
           <a
             href="#!"
-            className="mr-6 text-neutral-600 dark:text-neutral-200 text-xl"
+            className="mr-6 text-gray-600 dark:text-gray-200 text-xl"
           >
             <BiLogoFacebook />
           </a>
           <a
             href="#!"
-            className="mr-6 text-neutral-600 dark:text-neutral-200 text-xl"
+            className="mr-6 text-gray-600 dark:text-gray-200 text-xl"
           >
             <BiLogoLinkedinSquare />
           </a>
-          <a
-            href="#!"
-            className="text-neutral-600 dark:text-neutral-200 text-xl"
-          >
+          <a href="#!" className="text-gray-600 dark:text-gray-200 text-xl">
             <BiLogoGithub />
           </a>
         </div>
       </div>
 
-      <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
+      <div className="bg-gray-200 p-6 text-center dark:bg-gray-800">
         <span>© 2023 Copyright: </span>
-        <a
-          className="font-semibold text-neutral-600 dark:text-neutral-400"
-          href="#"
-        >
+        <a className="font-semibold text-gray-600 dark:text-gray-400" href="#">
           Designed by ahmed hassan
         </a>
       </div>
