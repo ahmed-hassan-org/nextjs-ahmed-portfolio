@@ -22,11 +22,14 @@ const ProfileHeader = () => {
             Hi, I'm Ahmed Hassan <span className="text-5xl">👋</span>
           </h1>
           <p className=" mt-2 font-light text-gray-900">
-            I'm a full stack developer (React.js & Node.js) with a focus on
-            creating (and occasionally designing) exceptional digital
-            experiences that are fast, accessible, visually appealing, and
-            responsive. Even though I have been creating web applications for
-            over 7 years, I still love it as if it was something new.
+            I'm a Software Engineer based in Egypt ☀️. I describe myself as a
+            passionate developer who loves coding, open source, and the web
+            platform ❤️.I teach my self front end technologies and i prefer to
+            use Angular as primary framework in work and then react,
+            react-native or flutter, i like to learn new technologie and have a
+            deep knowledge in my fied, also i have a good experinses in database
+            and sql and backend using nodejs express , nestjs , java spring boot
+            and python for web and data analysis
           </p>
           <div className="address-section my-5 flex flex-col">
             <div className="location-item flex flex-row w-2/4 flex-1">
@@ -58,13 +61,13 @@ const ProfileHeader = () => {
             </div>
           </div>
         </div>
-        <div className="md:col-span-1 md:order-2 sm:col-span-3  sm:order-1 px-3">
-          <div className="img-section md:w-[320px] sm:w-[230px] md:h-[360px] sm:h-[300px] relative">
-            <div className="relative bg-gray-200 md:w-[320px] sm:w-[230px] md:h-[360px] sm:h-[270px] z-10"></div>
+        <div className="md:col-span-1 md:order-2 sm:col-span-3  sm:order-1 px-3 sm:self-center  sm:justify-self-center">
+          <div className="img-section md:w-[320px] sm:w-[230px] md:h-[360px] sm:h-[300px] relative ">
+            <div className="relative bg-gray-200 md:w-[320px] sm:w-[240px] md:h-[360px] sm:h-[270px] z-10"></div>
             <Image
               src={pic}
               alt="log"
-              className="absolute top-[-8%] left-[-10%] md:w-[320px] sm:w-[230px] md:h-[360px] sm:h-[300px] object-contain z-20"
+              className="absolute top-[-8%] left-[-10%] sm:left-[5px] md:w-[320px] sm:w-[230px] md:h-[360px] sm:h-[300px] object-contain z-20"
             />
           </div>
         </div>
