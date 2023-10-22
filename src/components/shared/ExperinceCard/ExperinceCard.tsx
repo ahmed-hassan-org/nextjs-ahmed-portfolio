@@ -4,7 +4,7 @@ import ExperinceItemCard from "./ExperinceItemCard";
 const ExperinceCard = () => {
   return (
     <section
-      className="expericne-section-wrapper container relative grid grid-cols-4 mt-24 mb-16"
+      className="expericne-section-wrapper container relative grid grid-cols-4 mt-24 mb-16 sm:mt-10 sm:mb-4"
       id="experinceId"
     >
       <div className="col-span-4 flex flex-row justify-center items-center ">
@@ -13,15 +13,23 @@ const ExperinceCard = () => {
         </span>
       </div>
       <div className="col-span-4">
-        <p className="mt-4 mb-10 text-sm text-gray-600 font-light text-center">
+        <p className="mt-4 mb-10 sm:mb-3 text-sm text-gray-600 font-medium text-center">
           Here is a quick summary of my most recent experiences:
         </p>
       </div>
       <div className="col-span-4">
         <ExperinceItemCard></ExperinceItemCard>
+      </div>
+      <div className="col-span-4">
         <ExperinceItemCard></ExperinceItemCard>
+      </div>
+      <div className="col-span-4">
         <ExperinceItemCard></ExperinceItemCard>
+      </div>
+      <div className="col-span-4">
         <ExperinceItemCard></ExperinceItemCard>
+      </div>
+      <div className="col-span-4">
         <ExperinceItemCard></ExperinceItemCard>
       </div>
     </section>

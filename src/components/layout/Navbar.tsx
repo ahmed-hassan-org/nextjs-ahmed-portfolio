@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useEffect } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 import PorofileLogoLight from "../icons/PorofileLogoLight";
 import ProfileLogoDark from "../icons/ProfileLogoDark";
-
+import { effect, signal } from "@preact/signals-react";
 // import ahmedCv from "../../../public/AhmedHassan.pdf";
 const Navbar = () => {
-  const [themeMode, setThemeMode] = useState("light");
+  // const [themeMode, setThemeMode] = useState("light");
+  const themeMode = signal("light");
 
   const downloadPdfCv = () => {
     const pdfUrl = "../../../public/AhmedHassan.pdf";
@@ -26,18 +28,31 @@ const Navbar = () => {
   };
 
   const toggleDark = () => {
-    setThemeMode(themeMode === "light" ? "dark" : "light");
+    const theme = localStorage.getItem("color-theme") as string;
+    themeMode.value = theme === "light" ? "dark" : "light";
+    window.localStorage.setItem("color-theme", themeMode.value);
 
-    themeMode === "dark"
+    theme === "dark"
       ? window.document.body.classList.add("dark")
       : window.document.body.classList.remove("dark");
   };
 
   useEffect(() => {
-    const theme = (localStorage.getItem("color-theme") as string) ?? "light";
-    theme === "dark" ? window.document.body.classList.add("dark") : null;
-    setThemeMode(theme);
-  }, []);
+    const theme = localStorage.getItem("color-theme") as string;
+    themeMode.value = theme;
+    const init = async () => {
+      const { Collapse, initTE } = await import("tw-elements");
+      initTE({ Collapse }, { allowReinits: true });
+    };
+    init();
+  });
+
+  effect(() => {
+    if (typeof document !== "undefined") {
+      const theme = window.localStorage.getItem("color-theme") ?? "light";
+      themeMode.value = theme;
+    }
+  });
 
   return (
     <>
@@ -48,7 +63,7 @@ const Navbar = () => {
         <div className="flex w-full flex-wrap items-center justify-between px-6">
           <div className="mx-2">
             <a className="text-xl text-gray-100" href="#">
-              {themeMode === "light" ? (
+              {themeMode.value === "light" ? (
                 <ProfileLogoDark />
               ) : (
                 <PorofileLogoLight />
@@ -56,11 +71,11 @@ const Navbar = () => {
             </a>
           </div>
           <button
-            className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-gray-200 lg:hidden"
+            className="block border-0 bg-transparent px-2 text-gray-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-gray-200 lg:hidden"
             type="button"
             data-te-collapse-init
-            data-te-target="#navbarSupportedContent8"
-            aria-controls="navbarSupportedContent8"
+            data-te-target="#navbarSupportedContent2"
+            aria-controls="navbarSupportedContent2"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
@@ -82,7 +97,7 @@ const Navbar = () => {
 
           <div
             className="!visible mt-2 hidden flex-grow basis-[100%] items-center justify-end lg:mt-0 lg:!flex lg:basis-auto"
-            id="navbarSupportedContent8"
+            id="navbarSupportedContent2"
             data-te-collapse-item
           >
             <ul
@@ -94,7 +109,7 @@ const Navbar = () => {
                 data-te-nav-item-ref
               >
                 <a
-                  className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
                   aria-current="page"
                   data-te-nav-link-ref
                   onClick={() => handleClickScroll("profileHeaderId")}
@@ -107,7 +122,7 @@ const Navbar = () => {
                 data-te-nav-item-ref
               >
                 <a
-                  className="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  className="p-0 text-gray-500 transition duration-200 hover:text-gray-700 hover:ease-in-out focus:text-gray-700 disabled:text-black/30 motion-reduce:transition-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
                   onClick={() => handleClickScroll("experinceId")}
                   data-te-nav-link-ref
                 >
@@ -119,7 +134,7 @@ const Navbar = () => {
                 data-te-nav-item-ref
               >
                 <a
-                  className="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  className="p-0 text-gray-500 transition duration-200 hover:text-gray-700 hover:ease-in-out focus:text-gray-700 disabled:text-black/30 motion-reduce:transition-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
                   onClick={() => handleClickScroll("testimonialId")}
                   data-te-nav-link-ref
                 >
@@ -131,7 +146,7 @@ const Navbar = () => {
                 data-te-nav-item-ref
               >
                 <a
-                  className="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  className="p-0 text-gray-500 transition duration-200 hover:text-gray-700 hover:ease-in-out focus:text-gray-700 disabled:text-black/30 motion-reduce:transition-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
                   onClick={() => handleClickScroll("contactId")}
                   data-te-nav-link-ref
                 >
@@ -139,11 +154,11 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <span className="mx-4" onClick={toggleDark}>
-              {themeMode === "light" ? <BiMoon /> : <BiSun />}
-            </span>
+            <div className="md:mx-4 sm:my-2 sm:mx-0" onClick={toggleDark}>
+              {themeMode.value === "light" ? <BiMoon /> : <BiSun />}
+            </div>
             <button
-              className="inline-block rounded bg-gray-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:bg-gray-100 dark:text-gray-900 dark:shadow-[0_4px_9px_-4px_#030202] dark:hover:bg-gray-600 dark:hover:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)]"
+              className="inline-block rounded bg-gray-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-gray-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:bg-gray-100 dark:text-gray-900 dark:shadow-[0_4px_9px_-4px_#030202] dark:hover:bg-gray-600 dark:hover:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:focus:bg-gray-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:active:bg-gray-900 dark:active:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)]"
               onClick={downloadPdfCv}
             >
               Download CV

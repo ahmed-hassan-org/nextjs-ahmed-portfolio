@@ -7,10 +7,9 @@ const ContactCard = () => {
 
     try {
       await navigator.clipboard.writeText(text);
-      console.log("Content copied to clipboard");
       toast.info("Email copied to clipboard", { position: "bottom-left" });
     } catch (err) {
-      console.error("Failed to copy: ", err);
+      toast.info("Email copied to clipboard", { position: "bottom-left" });
     }
   };
   const copyPhone = async () => {
@@ -18,15 +17,14 @@ const ContactCard = () => {
 
     try {
       await navigator.clipboard.writeText(text);
-      console.log("Content copied to clipboard");
       toast.info("Phone copied to clipboard", { position: "bottom-left" });
     } catch (err) {
-      console.error("Failed to copy: ", err);
+      toast.info("Email copied to clipboard", { position: "bottom-left" });
     }
   };
   return (
     <section
-      className="expericne-section-wrapper container relative grid grid-cols-4 mt-24 dark:bg-gray-900 py-5 h-[300px]"
+      className="expericne-section-wrapper container relative grid grid-cols-4 mt-24 sm:mt-8 dark:bg-gray-900 py-5 h-[300px]"
       id="contactId"
     >
       <div className="col-span-4 flex flex-row justify-center items-center ">
@@ -35,7 +33,7 @@ const ContactCard = () => {
         </span>
       </div>
       <div className="col-span-4 flex flex-row justify-center items-center my-2">
-        <p className="text-center text-sm font-light text-gray-600 dark:text-gray-300">
+        <p className="text-center text-sm sm:text-xs sm:text-center font-light text-gray-600 dark:text-gray-300">
           What's next? Feel free to reach out to me if you're looking for <br />
           a developer, have a query, or simply want to connect.
         </p>
@@ -43,30 +41,30 @@ const ContactCard = () => {
       <div className="col-span-4 my-4">
         <div className="email-item flex flex-row justify-center items-center mb-3">
           <span className="mx-3">
-            <span className="text-3xl">
+            <span className=" sm:text-xl">
               <BiEnvelope className="dark:text-gray-300 text-gray-900" />
             </span>
           </span>
           <h4
-            className="text-3xl font-black text-gray-950 dark:text-gray-200"
+            className="text-3xl sm:text-base font-black text-gray-950 dark:text-gray-200"
             id="emailItem"
           >
             ahmedmedodev@gmail.com
           </h4>
           <span className="mx-3" data-te-toggle="tooltip" title="Copy email">
-            <span className="text-xl" onClick={copyEmail}>
+            <span className="text-xl sm:text-base" onClick={copyEmail}>
               <BiCopy className="dark:text-gray-300 text-gray-900" />
             </span>
           </span>
         </div>
         <div className="phone-item flex flex-row justify-center items-center">
           <span className="mx-3">
-            <span className="text-3xl">
+            <span className="text-3xl sm:text-xl">
               <BiPhone className="dark:text-gray-300 text-gray-900" />
             </span>
           </span>
           <h4
-            className="text-3xl font-black text-gray-950 dark:text-gray-200"
+            className="text-3xl sm:text-base font-black text-gray-950 dark:text-gray-200"
             id="phoneItem"
           >
             +201023456789
@@ -79,7 +77,7 @@ const ContactCard = () => {
             data-te-ripple-color="light"
             title="Copy phone"
           >
-            <span className="text-xl" onClick={copyPhone}>
+            <span className="text-xl sm:text-base" onClick={copyPhone}>
               <BiCopy className="dark:text-gray-300 text-gray-900" />
             </span>
           </span>

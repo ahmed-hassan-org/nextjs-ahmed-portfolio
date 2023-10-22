@@ -14,14 +14,15 @@ const ProfileHeader = () => {
   return (
     <>
       <section
-        className="container grid grid-cols-3 md:h-[550px] gap-4 sm:mb-10 dark:bg-gray-900"
+        className="container grid grid-cols-3 md:h-[550px] gap-4 sm:mb-10 dark:bg-gray-900 sm:pt-10"
         id="profileHeaderId"
       >
         <div className="sm:col-span-3 sm:order-2 md:col-span-2 md:order-1 px-8 justify-self-center flex flex-col justify-center">
-          <h1 className="m-0 text-4xl font-bold text-gray-900 dark:text-gray-100">
-            Hi, I'm Ahmed Hassan <span className="text-5xl">👋</span>
+          <h1 className="m-0 text-4xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">
+            Hi, I'm Ahmed Hassan
+            <span className="text-5xl sm:text-3xl">👋</span>
           </h1>
-          <p className=" mt-2 font-light text-gray-900 dark:text-gray-200">
+          <p className=" mt-2 font-light text-gray-900 dark:text-gray-200 text-base sm:text-xs">
             I'm a Software Engineer based in Egypt ☀️. I describe myself as a
             passionate developer who loves coding, open source, and the web
             platform ❤️.I teach my self front end technologies and i prefer to
@@ -36,7 +37,7 @@ const ProfileHeader = () => {
               <span className="mr-2 mt-1">
                 <BiMap className="text-gray-900 dark:text-gray-300" />
               </span>
-              <h3 className="m-0 text-lg text-gray-600 dark:text-gray-200">
+              <h3 className="m-0 text-lg text-gray-600 dark:text-gray-200 sm:text-base">
                 Cairo, Egypt.
               </h3>
             </div>
@@ -44,32 +45,32 @@ const ProfileHeader = () => {
               <span className="mr-2 mt-1">
                 <BiMessage className="text-gray-900 dark:text-gray-300" />
               </span>
-              <h3 className="m-0 text-lg text-gray-600 dark:text-gray-200">
+              <h3 className="m-0 text-lg text-gray-600 dark:text-gray-200 sm:text-base">
                 ahmedmedodev@gmail.com
               </h3>
             </div>
           </div>
           <div className="social-section mt-4">
             <div className="flex flex-row">
-              <span className=" text-2xl">
+              <span className=" text-2xl sm:text-lg">
                 <BiLogoGithub className="text-gray-900 dark:text-gray-300" />
               </span>
-              <span className="mx-3 text-2xl">
+              <span className="mx-3 text-2xl sm:text-lg">
                 <BiLogoTwitter className="text-gray-900 dark:text-gray-300" />
               </span>
-              <span className="text-2xl">
+              <span className="text-2xl sm:text-lg">
                 <BiLogoLinkedin className="text-gray-900 dark:text-gray-300" />
               </span>
             </div>
           </div>
         </div>
         <div className="md:col-span-1 md:order-2 sm:col-span-3  sm:order-1 px-3 sm:self-center  sm:justify-self-center">
-          <div className="img-section md:w-[320px] sm:w-[230px] md:h-[360px] sm:h-[300px] relative">
-            <div className="relative bg-gray-200 md:w-[320px] sm:w-[240px] md:h-[360px] sm:h-[270px] z-10 dark:bg-gray-400"></div>
+          <div className="img-section md:w-[320px] sm:w-[230px] md:h-[300px] sm:h-[250px] relative">
+            <div className="relative bg-gray-200 md:w-[320px] sm:w-[240px] md:h-[300px] sm:h-[270px] z-10 dark:bg-gray-400"></div>
             <Image
               src={pic}
               alt="logo"
-              className="absolute top-[-8%] left-[-10%] sm:left-[5px] md:w-[320px] sm:w-[230px] md:h-[360px] sm:h-[300px] object-contain z-20"
+              className="absolute top-[-8%] left-[-10%] sm:left-[5px] md:w-[320px] sm:w-[230px] md:h-[300px] sm:h-[250px] object-contain z-20"
             />
           </div>
         </div>

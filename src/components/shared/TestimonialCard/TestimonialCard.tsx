@@ -5,7 +5,7 @@ import TestimonialItem from "./TestimonialItem";
 const TestimonialCard = () => {
   return (
     <section
-      className="expericne-section-wrapper container relative grid grid-cols-4 mt-24 mb-16"
+      className="expericne-section-wrapper container relative grid grid-cols-4 mt-24 mb-16 sm:mt-10 sm:mb-4"
       id="testimonialId"
     >
       <div className="col-span-4 flex flex-row justify-center items-center ">
@@ -13,12 +13,18 @@ const TestimonialCard = () => {
           Testimonial
         </span>
       </div>
-      <div className="col-span-4 px-4 py-8">
+      <div className="col-span-4 px-4 py-8 sm:py-2 sm:px-2">
         <Swiper
           spaceBetween={40}
           slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={swiper => console.log(swiper)}
+          breakpoints={{
+            340: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }}
         >
           <SwiperSlide>
             <TestimonialItem imageId={1} />

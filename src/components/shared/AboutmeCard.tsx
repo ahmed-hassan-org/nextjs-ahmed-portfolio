@@ -23,18 +23,18 @@ const AboutmeCard = () => {
           />
         </div>
       </div>
-      <div className="md:col-span-2 sm:col-span-3 sm:order-2 sm:mb-10 px-16">
-        <h1 className="text-gray-900 text-2xl sm:text-lg font-semibold dark:text-gray-200">
+      <div className="md:col-span-2 sm:col-span-3 sm:order-2 sm:mb-10 px-16 sm:px-4">
+        <h1 className="text-gray-900 text-2xl sm:text-base font-semibold dark:text-gray-200">
           Curious about me? Here you have it:
         </h1>
-        <p className="text-sm font-light text-gray-600 mt-4 dark:text-gray-300">
+        <p className="text-sm sm:text-xs font-light text-gray-600 mt-4 dark:text-gray-300">
           I'm a passionate, self-proclaimed designer who specializes in full
           stack development (React.js & Node.js). I am very enthusiastic about
           bringing the technical and visual aspects of digital products to life.
           User experience, pixel perfect design, and writing clear, readable,
           highly performant code matters to me.
         </p>
-        <p className="text-sm font-light text-gray-600 mt-2 dark:text-gray-300">
+        <p className="text-sm sm:text-xs font-light text-gray-600 mt-2 dark:text-gray-300">
           I began my journey as a web developer in 2015, and since then, I've
           continued to grow and evolve as a developer, taking on new challenges
           and learning the latest technologies along the way. Now, in my early
@@ -42,11 +42,11 @@ const AboutmeCard = () => {
           building cutting-edge web applications using modern technologies such
           as Next.js, TypeScript, Nestjs, Tailwindcss, Supabase and much more.
         </p>
-        <p className="text-sm font-light text-gray-600 mt-2 dark:text-gray-300">
+        <p className="text-sm sm:text-xs font-light text-gray-600 mt-2 dark:text-gray-300">
           I am very much a progressive thinker and enjoy working on products end
           to end, from ideation all the way to development.
         </p>
-        <p className="text-sm font-light text-gray-600 mt-2 dark:text-gray-300">
+        <p className="text-sm sm:text-xs font-light text-gray-600 mt-2 dark:text-gray-300">
           When I'm not in full-on developer mode, you can find me hovering
           around on twitter or on indie hacker, witnessing the journey of early
           startups or enjoying some free time. You can follow me on Twitter
@@ -57,20 +57,22 @@ const AboutmeCard = () => {
           <div className="col-span-1">
             <ul className="flex flex-col list-disc">
               <li className="flex-1">
-                <h4 className="text-base">B.E Information Technology</h4>
+                <h4 className="text-base sm:text-xs">
+                  B.E Information Technology
+                </h4>
               </li>
               <li className="flex-1">
-                <h4 className="text-base">Fulltime work</h4>
+                <h4 className="text-base sm:text-xs">Fulltime work</h4>
               </li>
             </ul>
           </div>
           <div className="col-span-1">
             <ul className="flex flex-col list-disc">
               <li className="flex-1">
-                <h4 className="text-base">Freelancer, part time</h4>
+                <h4 className="text-base sm:text-xs">Freelancer, part time</h4>
               </li>
               <li className="flex-1">
-                <h4 className="text-base">Work by project</h4>
+                <h4 className="text-base sm:text-xs">Work by project</h4>
               </li>
             </ul>
           </div>

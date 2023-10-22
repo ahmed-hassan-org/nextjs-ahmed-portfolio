@@ -24,6 +24,7 @@ const config: Config = {
       },
       screens: {
         desktop: "1440px",
+        sm: "340px",
       },
       colors: {
         black: "#101828",

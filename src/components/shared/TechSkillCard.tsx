@@ -20,7 +20,7 @@ import gitIcon from "../icons/icon-git.svg";
 const TechSkillCard = () => {
   return (
     <section
-      className="container skill-section-wrapper relative grid grid-cols-4 mt-24 mb-4"
+      className="container skill-section-wrapper relative grid grid-cols-4 mt-24 sm:mt-4 mb-4 sm:mb-2"
       id="skillId"
     >
       <div className="col-span-4 flex flex-row justify-center items-center pb-10">
