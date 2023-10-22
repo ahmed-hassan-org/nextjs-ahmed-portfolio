@@ -1,9 +1,9 @@
-"use client";
+// "use client";
 import React, { useEffect } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 import PorofileLogoLight from "../icons/PorofileLogoLight";
 import ProfileLogoDark from "../icons/ProfileLogoDark";
-import { effect, signal } from "@preact/signals-react";
+import { signal } from "@preact/signals-react";
 // import ahmedCv from "../../../public/AhmedHassan.pdf";
 const Navbar = () => {
   // const [themeMode, setThemeMode] = useState("light");
@@ -45,13 +45,6 @@ const Navbar = () => {
       initTE({ Collapse }, { allowReinits: true });
     };
     init();
-  });
-
-  effect(() => {
-    if (typeof document !== "undefined") {
-      const theme = window.localStorage.getItem("color-theme") ?? "light";
-      themeMode.value = theme;
-    }
   });
 
   return (
