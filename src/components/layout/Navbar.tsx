@@ -45,7 +45,7 @@ const Navbar = () => {
       initTE({ Collapse }, { allowReinits: true });
     };
     init();
-  });
+  }, []);
 
   return (
     <>
