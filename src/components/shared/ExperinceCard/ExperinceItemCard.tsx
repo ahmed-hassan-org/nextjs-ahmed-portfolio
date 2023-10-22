@@ -2,7 +2,7 @@ import React from "react";
 
 const ExperinceItemCard = () => {
   return (
-    <div className="experince-item-card grid grid-cols-7 border-b-2 border-b-gray-300 dark:border-b-0  pb-5 card mb-3 mt-6 dark:bg-gray-700 md:mx-40 sm:mx-2 rounded-md py-6 sm:px-2">
+    <div className="experince-item-card grid grid-cols-7 border-b-2 shadow-lg border-b-gray-300 dark:border-b-0  pb-5 card mb-3 mt-6 dark:bg-gray-700 md:mx-20 sm:mx-2 rounded-md py-6 sm:px-2">
       <div className="col-span-2 sm:col-span-7 sm:order-1 md:order-1">
         <h5 className="m-0 text-primary-green md:text-center text-lg sm:text-base dark:text-primary-green">
           Company Name

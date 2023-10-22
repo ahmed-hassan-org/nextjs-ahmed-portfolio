@@ -13,7 +13,7 @@ const TestimonialCard = () => {
           Testimonial
         </span>
       </div>
-      <div className="col-span-4 px-4 py-8 sm:py-2 sm:px-2">
+      <div className="col-span-4 md:px-4 md:py-8 sm:py-2 sm:px-2">
         <Swiper
           spaceBetween={40}
           slidesPerView={3}

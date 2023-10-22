@@ -118,6 +118,19 @@ const Navbar = () => {
                 </a>
               </li>
               <li
+                className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                data-te-nav-item-ref
+              >
+                <a
+                  className="active disabled:text-black/30 lg:px-2 dark:[&.active]:text-gray-400"
+                  aria-current="page"
+                  data-te-nav-link-ref
+                  onClick={() => handleClickScroll("skillId")}
+                >
+                  Skills
+                </a>
+              </li>
+              <li
                 className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
                 data-te-nav-item-ref
               >

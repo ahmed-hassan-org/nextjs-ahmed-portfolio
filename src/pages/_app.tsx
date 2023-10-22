@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "react-toastify/dist/ReactToastify.css";
 import "tw-elements/dist/css/tw-elements.min.css";
-import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
 
@@ -34,4 +33,5 @@ function App({ Component, pageProps }: AppProps) {
   );
 }
 
-export default appWithTranslation(App);
+// export default appWithTranslation(App);
+export default App;

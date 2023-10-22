@@ -41,12 +41,12 @@ const ContactCard = () => {
       <div className="col-span-4 my-4">
         <div className="email-item flex flex-row justify-center items-center mb-3">
           <span className="mx-3">
-            <span className=" sm:text-xl">
+            <span className="md:text-3xl sm:text-xl">
               <BiEnvelope className="dark:text-gray-300 text-gray-900" />
             </span>
           </span>
           <h4
-            className="text-3xl sm:text-base font-black text-gray-950 dark:text-gray-200"
+            className="md:text-3xl sm:text-base font-black text-gray-950 dark:text-gray-200"
             id="emailItem"
           >
             ahmedmedodev@gmail.com
@@ -59,12 +59,12 @@ const ContactCard = () => {
         </div>
         <div className="phone-item flex flex-row justify-center items-center">
           <span className="mx-3">
-            <span className="text-3xl sm:text-xl">
+            <span className="md:text-3xl sm:text-xl">
               <BiPhone className="dark:text-gray-300 text-gray-900" />
             </span>
           </span>
           <h4
-            className="text-3xl sm:text-base font-black text-gray-950 dark:text-gray-200"
+            className="md:text-3xl sm:text-base font-black text-gray-950 dark:text-gray-200"
             id="phoneItem"
           >
             +201023456789

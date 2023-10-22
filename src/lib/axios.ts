@@ -1,7 +1,7 @@
 import Axios, { InternalAxiosRequestConfig } from "axios";
 
 export const axios = Axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  baseURL: process.env.NEXT_PUBLIC_API_URL ?? "",
 });
 
 function authRequestInterceptor(config: InternalAxiosRequestConfig) {

@@ -17,7 +17,7 @@ const ProfileHeader = () => {
         className="container grid grid-cols-3 md:h-[550px] gap-4 sm:mb-10 dark:bg-gray-900 sm:pt-10"
         id="profileHeaderId"
       >
-        <div className="sm:col-span-3 sm:order-2 md:col-span-2 md:order-1 px-8 justify-self-center flex flex-col justify-center">
+        <div className="sm:col-span-3 sm:order-2 md:col-span-2 md:order-1 md:px-8 sm:mt-6 justify-self-center flex flex-col justify-center">
           <h1 className="m-0 text-4xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">
             Hi, I'm Ahmed Hassan
             <span className="text-5xl sm:text-3xl">👋</span>
@@ -50,7 +50,7 @@ const ProfileHeader = () => {
               </h3>
             </div>
           </div>
-          <div className="social-section mt-4">
+          <div className="social-section md:mt-4 sm:mb-3">
             <div className="flex flex-row">
               <span className=" text-2xl sm:text-lg">
                 <BiLogoGithub className="text-gray-900 dark:text-gray-300" />
@@ -64,13 +64,13 @@ const ProfileHeader = () => {
             </div>
           </div>
         </div>
-        <div className="md:col-span-1 md:order-2 sm:col-span-3  sm:order-1 px-3 sm:self-center  sm:justify-self-center">
+        <div className="md:col-span-1 md:order-2 sm:col-span-3 sm:order-1 md:px-3 sm:self-center  sm:justify-self-center">
           <div className="img-section md:w-[320px] sm:w-[230px] md:h-[300px] sm:h-[250px] relative">
-            <div className="relative bg-gray-200 md:w-[320px] sm:w-[240px] md:h-[300px] sm:h-[270px] z-10 dark:bg-gray-400"></div>
+            <div className="relative bg-gray-200 md:w-[250px] sm:w-[240px] md:h-[280px] sm:h-[240px] z-10 dark:bg-gray-400"></div>
             <Image
               src={pic}
               alt="logo"
-              className="absolute top-[-8%] left-[-10%] sm:left-[5px] md:w-[320px] sm:w-[230px] md:h-[300px] sm:h-[250px] object-contain z-20"
+              className="absolute top-[-8%] left-[-10%] sm:left-[5px] md:w-[250px] sm:w-[230px] md:h-[300px] sm:h-[250px] object-contain z-20"
             />
           </div>
         </div>
