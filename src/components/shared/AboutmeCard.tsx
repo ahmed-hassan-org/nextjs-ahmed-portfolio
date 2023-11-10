@@ -19,6 +19,7 @@ const AboutmeCard = () => {
           <Image
             src={pic2}
             alt="logo2"
+            loading="lazy"
             className="absolute top-[-5%] left-[-4%] w-[320px] h-[360px] object-contain z-20"
           />
         </div>

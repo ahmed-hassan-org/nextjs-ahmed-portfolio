@@ -70,6 +70,7 @@ const ProfileHeader = () => {
             <Image
               src={pic}
               alt="logo"
+              loading="lazy"
               className="absolute top-[-8%] left-[-10%] sm:left-[5px] md:w-[250px] sm:w-[230px] md:h-[300px] sm:h-[250px] object-contain z-20"
             />
           </div>

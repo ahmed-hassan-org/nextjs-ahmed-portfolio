@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const downloadPdfCv = () => {
     const pdfUrl = "../../../public/AhmedHassan.pdf";
-    saveAs(pdfUrl, "Ahmed hassan");
+    saveAs(pdfUrl, "Ahmedhassan.pdf");
   };
 
   const handleClickScroll = (id: string) => {
