@@ -1,6 +1,7 @@
 import React from "react";
 import { BiEnvelope, BiPhone, BiCopy } from "react-icons/bi";
 import { toast } from "react-toastify";
+
 const ContactCard = () => {
   const copyEmail = async () => {
     const text = document.getElementById("emailItem")!.innerHTML;

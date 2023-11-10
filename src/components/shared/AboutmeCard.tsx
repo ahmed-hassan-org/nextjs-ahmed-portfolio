@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import pic2 from "../icons/Pic2.svg";
+import pic2 from "../../../public/images/ahmedhassan.png";
 
 const AboutmeCard = () => {
   return (

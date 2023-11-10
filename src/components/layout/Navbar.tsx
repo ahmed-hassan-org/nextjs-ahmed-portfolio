@@ -4,19 +4,15 @@ import { BiSun, BiMoon } from "react-icons/bi";
 import PorofileLogoLight from "../icons/PorofileLogoLight";
 import ProfileLogoDark from "../icons/ProfileLogoDark";
 import { signal } from "@preact/signals-react";
-// import ahmedCv from "../../../public/AhmedHassan.pdf";
+import { saveAs } from "file-saver";
+
 const Navbar = () => {
   // const [themeMode, setThemeMode] = useState("light");
   const themeMode = signal("light");
 
   const downloadPdfCv = () => {
     const pdfUrl = "../../../public/AhmedHassan.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "document.pdf"; // specify the filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    saveAs(pdfUrl, "Ahmed hassan");
   };
 
   const handleClickScroll = (id: string) => {
@@ -30,11 +26,16 @@ const Navbar = () => {
   const toggleDark = () => {
     const theme = localStorage.getItem("color-theme") as string;
     themeMode.value = theme === "light" ? "dark" : "light";
-    window.localStorage.setItem("color-theme", themeMode.value);
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(
+        "color-theme",
+        theme === "light" ? "dark" : "light"
+      );
 
-    theme === "dark"
-      ? window.document.body.classList.add("dark")
-      : window.document.body.classList.remove("dark");
+      theme === "dark"
+        ? window.document.body.classList.add("dark")
+        : window.document.body.classList.remove("dark");
+    }
   };
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const Navbar = () => {
       initTE({ Collapse }, { allowReinits: true });
     };
     init();
-  }, []);
+  }, [themeMode]);
 
   return (
     <>

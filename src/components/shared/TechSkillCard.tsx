@@ -16,6 +16,7 @@ import figmaIcon from "../icons/icon-figma.svg";
 import cypressIcon from "../icons/icon-cypress.svg";
 import storybookIcon from "../icons/icon-storybook.svg";
 import gitIcon from "../icons/icon-git.svg";
+import angularIcon from "../icons/icon-angular.svg";
 
 const TechSkillCard = () => {
   return (
@@ -46,6 +47,12 @@ const TechSkillCard = () => {
             <Image src={reactIcon} alt="react" />
             <h6 className="m-0 text-sm font-light text-gray-600 dark:text-gray-100 mt-2">
               React
+            </h6>
+          </div>
+          <div className="col-span-1 flex flex-col justify-center items-center w-[84px] h-[84px] self-center">
+            <Image src={angularIcon} alt="angular" width={84} height={84} />
+            <h6 className="m-0 text-sm font-light text-gray-600 dark:text-gray-100 mt-2">
+              Angular
             </h6>
           </div>
           <div className="col-span-1 flex flex-col justify-center items-center">

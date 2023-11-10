@@ -7,7 +7,7 @@ import {
   BiLogoTwitter,
   BiLogoLinkedin,
 } from "react-icons/bi";
-import pic from "../icons/Pic.svg";
+import pic from "../../../public/images/ahmedhassan.png";
 import AboutmeCard from "./AboutmeCard";
 
 const ProfileHeader = () => {
