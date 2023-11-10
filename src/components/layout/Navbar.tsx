@@ -46,7 +46,8 @@ const Navbar = () => {
       initTE({ Collapse }, { allowReinits: true });
     };
     init();
-  }, [themeMode]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
