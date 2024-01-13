@@ -14,19 +14,11 @@ const ProfileHeader = () => {
   const sendEmail = async () => {
     const resend = new Resend("re_NaZXSXSb_SSB1XFbCjvLkhUZgLLSAeRtQ");
     try {
-      const data = await fetch("https://jsonplaceholder.typicode.com/posts/1", {
-        method: "GET",
-      });
-      console.log(await data.json());
-
       const res = await resend.emails.send({
         from: "messi10010@gmail.com",
         to: "ahmedmedodev@gmail.com",
         subject: "tes resend email",
         html: "<h1>hello</h1>",
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-        },
       });
       console.log(res);
     } catch (error) {

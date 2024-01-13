@@ -30,6 +30,8 @@ const nextConfig = {
       "bikerz-development-6y2im.ondigitalocean.app",
       "tecdn.b-cdn.net",
       "www.tecdn.b-cdn.net",
+      "ahmed-hassn-portfolio.netlify.app",
+      "ahmed-hassn-portfolio.netlify",
     ],
   },
 };
