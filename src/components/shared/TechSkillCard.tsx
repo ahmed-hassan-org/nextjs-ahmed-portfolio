@@ -49,9 +49,13 @@ const TechSkillCard = () => {
               React
             </h6>
           </div>
-          <div className="col-span-1 flex flex-col justify-center items-center w-[84px] h-[84px] self-center">
-            <Image src={angularIcon} alt="angular" width={84} height={84} />
-            <h6 className="m-0 text-sm font-light text-gray-600 dark:text-gray-100 mt-2">
+          <div className="col-span-1 flex flex-col justify-center items-center w-[100%] h-auto self-center">
+            <Image
+              src={angularIcon}
+              alt="angular"
+              className="w-[84px] h-[84px]"
+            />
+            <h6 className="m-0 text-sm font-light text-gray-600 dark:text-gray-100 ">
               Angular
             </h6>
           </div>

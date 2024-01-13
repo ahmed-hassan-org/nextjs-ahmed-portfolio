@@ -9,30 +9,14 @@ import {
 } from "react-icons/bi";
 import pic from "../../../public/images/ahmedhassan.png";
 import AboutmeCard from "./AboutmeCard";
-import { Resend } from "resend";
 const ProfileHeader = () => {
-  const sendEmail = async () => {
-    const resend = new Resend("re_NaZXSXSb_SSB1XFbCjvLkhUZgLLSAeRtQ");
-    try {
-      const res = await resend.emails.send({
-        from: "messi10010@gmail.com",
-        to: "ahmedmedodev@gmail.com",
-        subject: "tes resend email",
-        html: "<h1>hello</h1>",
-      });
-      console.log(res);
-    } catch (error) {
-      console.log("an error heer ");
-      console.log("email not sent");
-    }
-  };
   return (
     <>
       <section
         className="container grid grid-cols-3 md:h-[550px] gap-4 sm:mb-10 dark:bg-gray-900 sm:pt-10"
         id="profileHeaderId"
       >
-        <div className="sm:col-span-3 sm:order-2 md:col-span-2 md:order-1 md:px-8 sm:mt-6 justify-self-center flex flex-col justify-center">
+        <div className="sm:col-span-full sm:order-2 md:col-span-2 md:order-1 md:px-8 sm:mt-6 justify-self-center flex flex-col justify-center">
           <h1 className="m-0 text-4xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">
             Hi, I'm Ahmed Hassan
             <span className="text-5xl sm:text-3xl">👋</span>
@@ -79,7 +63,7 @@ const ProfileHeader = () => {
             </div>
           </div>
         </div>
-        <div className="md:col-span-1 md:order-2 sm:col-span-3 sm:order-1 md:px-3 sm:self-center  sm:justify-self-center">
+        <div className="md:col-span-1 md:order-2 sm:col-span-full sm:order-1 md:px-3 sm:self-center  sm:justify-self-center">
           <div className="img-section md:w-[320px] sm:w-[230px] md:h-[300px] sm:h-[250px] relative">
             <div className="relative bg-gray-200 md:w-[250px] sm:w-[240px] md:h-[280px] sm:h-[240px] z-10 dark:bg-gray-400"></div>
             <Image
@@ -89,15 +73,6 @@ const ProfileHeader = () => {
               className="absolute top-[-8%] left-[-10%] sm:left-[5px] md:w-[250px] sm:w-[230px] md:h-[300px] sm:h-[250px] object-contain z-20"
             />
           </div>
-        </div>
-        <div className="col-span-full">
-          <button
-            type="button"
-            className="p-2 rounded-md text-green-800 bg-green-200 shadow-md"
-            onClick={sendEmail}
-          >
-            Send Email
-          </button>
         </div>
       </section>
       <AboutmeCard />
