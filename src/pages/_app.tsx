@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "tw-elements/dist/css/tw-elements.min.css";
 import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
-
+import { appWithTranslation } from "next-i18next";
 function App({ Component, pageProps }: AppProps) {
   // useEffect(() => {
   //   // localStorage.setItem("color-theme", "light");
@@ -33,5 +33,5 @@ function App({ Component, pageProps }: AppProps) {
   );
 }
 
-// export default appWithTranslation(App);
-export default App;
+export default appWithTranslation(App);
+// export default App;

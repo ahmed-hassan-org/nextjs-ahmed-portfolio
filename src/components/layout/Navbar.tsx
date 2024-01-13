@@ -162,7 +162,10 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <div className="md:mx-4 sm:my-2 sm:mx-0" onClick={toggleDark}>
+            <div
+              className="md:mx-4 sm:my-2 sm:mx-0 cursor-pointer"
+              onClick={toggleDark}
+            >
               {themeMode.value === "light" ? <BiMoon /> : <BiSun />}
             </div>
             <button

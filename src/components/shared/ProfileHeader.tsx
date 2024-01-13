@@ -9,8 +9,31 @@ import {
 } from "react-icons/bi";
 import pic from "../../../public/images/ahmedhassan.png";
 import AboutmeCard from "./AboutmeCard";
-
+import { Resend } from "resend";
 const ProfileHeader = () => {
+  const sendEmail = async () => {
+    const resend = new Resend("re_NaZXSXSb_SSB1XFbCjvLkhUZgLLSAeRtQ");
+    try {
+      const data = await fetch("https://jsonplaceholder.typicode.com/posts/1", {
+        method: "GET",
+      });
+      console.log(await data.json());
+
+      const res = await resend.emails.send({
+        from: "messi10010@gmail.com",
+        to: "ahmedmedodev@gmail.com",
+        subject: "tes resend email",
+        html: "<h1>hello</h1>",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
+      console.log(res);
+    } catch (error) {
+      console.log("an error heer ");
+      console.log("email not sent");
+    }
+  };
   return (
     <>
       <section
@@ -74,6 +97,15 @@ const ProfileHeader = () => {
               className="absolute top-[-8%] left-[-10%] sm:left-[5px] md:w-[250px] sm:w-[230px] md:h-[300px] sm:h-[250px] object-contain z-20"
             />
           </div>
+        </div>
+        <div className="col-span-full">
+          <button
+            type="button"
+            className="p-2 rounded-md text-green-800 bg-green-200 shadow-md"
+            onClick={sendEmail}
+          >
+            Send Email
+          </button>
         </div>
       </section>
       <AboutmeCard />
