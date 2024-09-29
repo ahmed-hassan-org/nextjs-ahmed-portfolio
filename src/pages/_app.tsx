@@ -7,19 +7,34 @@ import "tw-elements/dist/css/tw-elements.min.css";
 import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
 import { appWithTranslation } from "next-i18next";
+import { useEffect } from "react";
+import {
+  LocalStorageKeys,
+  SupportedTheme,
+} from "@/core/model/LocalStorageKeys.enum";
+import { useLayoutStore } from "@/stores/LayoutStore";
 function App({ Component, pageProps }: AppProps) {
-  // useEffect(() => {
-  //   // localStorage.setItem("color-theme", "light");
-  //   if (
-  //     localStorage.getItem("color-theme") === "dark" ||
-  //     (!("color-theme" in localStorage) &&
-  //       window.matchMedia("(prefers-color-scheme: dark)").matches)
-  //   ) {
-  //     document.documentElement.classList.add("dark");
-  //   } else {
-  //     document.documentElement.classList.remove("dark");
-  //   }
-  // }, []);
+  const layoutState = useLayoutStore();
+
+  useEffect(() => {
+    // check for theme
+    if (
+      typeof window !== "undefined" &&
+      !localStorage.getItem(LocalStorageKeys.APP_THEME)
+    ) {
+      window.localStorage.setItem(LocalStorageKeys.APP_THEME, layoutState.appTheme);
+      layoutState.appTheme === "dark"
+        ? window.document.body.classList.add("dark")
+        : window.document.body.classList.remove("dark");
+    } else {
+      localStorage.getItem(LocalStorageKeys.APP_THEME) === "light"
+        ? layoutState.setAppTheme(SupportedTheme.THEME_LIGHT)
+        : layoutState.setAppTheme(SupportedTheme.THEME_DARK);
+      layoutState.appTheme === "dark"
+        ? window.document.body.classList.add("dark")
+        : window.document.body.classList.remove("dark");
+    }
+  }, []);
 
   return (
     <main suppressHydrationWarning>
@@ -34,4 +49,3 @@ function App({ Component, pageProps }: AppProps) {
 }
 
 export default appWithTranslation(App);
-// export default App;

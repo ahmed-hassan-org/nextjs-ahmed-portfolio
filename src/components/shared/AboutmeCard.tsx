@@ -36,7 +36,7 @@ const AboutmeCard = () => {
           highly performant code matters to me.
         </p>
         <p className="text-sm sm:text-xs font-light text-gray-600 mt-2 dark:text-gray-300">
-          I began my journey as a web developer in 2015, and since then, I've
+          I began my journey as a web developer in 2012, and since then, I've
           continued to grow and evolve as a developer, taking on new challenges
           and learning the latest technologies along the way. Now, in my early
           thirties, 7 years after starting my web development journey, I'm

@@ -1,5 +1,6 @@
 import React from "react";
 import ExperinceItemCard from "./ExperinceItemCard";
+import { experinceData } from "./ExperinceData";
 
 const ExperinceCard = () => {
   return (
@@ -17,21 +18,15 @@ const ExperinceCard = () => {
           Here is a quick summary of my most recent experiences:
         </p>
       </div>
-      <div className="col-span-4">
-        <ExperinceItemCard></ExperinceItemCard>
-      </div>
-      <div className="col-span-4">
-        <ExperinceItemCard></ExperinceItemCard>
-      </div>
-      <div className="col-span-4">
-        <ExperinceItemCard></ExperinceItemCard>
-      </div>
-      <div className="col-span-4">
-        <ExperinceItemCard></ExperinceItemCard>
-      </div>
-      <div className="col-span-4">
-        <ExperinceItemCard></ExperinceItemCard>
-      </div>
+      {experinceData &&
+        experinceData.map(ele => (
+          <div className="col-span-full" key={ele.id}>
+            <ExperinceItemCard
+              experinceItem={ele}
+              key={ele.id}
+            ></ExperinceItemCard>
+          </div>
+        ))}
     </section>
   );
 };

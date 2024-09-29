@@ -54,6 +54,7 @@ const config: Config = {
   plugins: [
     require("@tailwindcss/typography"),
     require("tw-elements/dist/plugin.cjs"),
+    require("tailwindcss-animate"),
   ],
 };
 export default config;

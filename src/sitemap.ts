@@ -9,13 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://localhost:3000/about",
+      url: "https://localhost:3000/contactus",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://localhost:3000/blog",
+      url: "https://localhost:3000/aboutus",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.5,

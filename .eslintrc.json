@@ -10,7 +10,7 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["prettier"],
   "rules": {
-    "no-console": "off",
+    "no-console": "warn",
     "no-unused-vars": "error",
     "@typescript-eslint/ban-ts-comment": "warn",
     "prettier/prettier": [

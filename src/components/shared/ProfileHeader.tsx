@@ -22,7 +22,7 @@ const ProfileHeader = () => {
             <span className="text-5xl sm:text-3xl">👋</span>
           </h1>
           <p className=" mt-2 font-light text-gray-900 dark:text-gray-200 text-base sm:text-xs">
-            I'm a Software Engineer based in Egypt ☀️. I describe myself as a
+            I'm a Software Engineer based in Dubai & Qatar ☀️. I describe myself as a
             passionate developer who loves coding, open source, and the web
             platform ❤️.I teach my self front end technologies and i prefer to
             use Angular as primary framework in work and then react,

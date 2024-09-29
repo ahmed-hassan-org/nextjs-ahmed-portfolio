@@ -31,9 +31,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-gray-200 p-6 sm:p-3 text-center dark:bg-gray-800 sm:text-sm text-base">
+      <div className="bg-gray-200 p-6 sm:p-3 text-center dark:bg-gray-800 sm:text-xs text-sm">
         <span>© 2023 Copyright: </span>
-        <a className="font-semibold text-gray-600 dark:text-gray-400" href="#">
+        <a className="font-medium text-gray-600 dark:text-gray-400" href="#">
           Designed by ahmed hassan
         </a>
       </div>

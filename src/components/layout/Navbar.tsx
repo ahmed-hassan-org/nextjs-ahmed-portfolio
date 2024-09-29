@@ -1,19 +1,15 @@
-// "use client";
-import React, { useEffect } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 import PorofileLogoLight from "../icons/PorofileLogoLight";
 import ProfileLogoDark from "../icons/ProfileLogoDark";
-import { signal } from "@preact/signals-react";
-import { saveAs } from "file-saver";
+import Link from "next/link";
+import { useLayoutStore } from "@/stores/LayoutStore";
+import { LocalStorageKeys } from "@/core/model/LocalStorageKeys.enum";
 
 const Navbar = () => {
-  // const [themeMode, setThemeMode] = useState("light");
-  const themeMode = signal("light");
-
-  const downloadPdfCv = () => {
-    const pdfUrl = "../../../public/AhmedHassan.pdf";
-    saveAs(pdfUrl, "Ahmedhassan.pdf");
-  };
+  const layoutState = useLayoutStore();
+  const [themeMode, setThemeMode] = useState(layoutState.appTheme);
 
   const handleClickScroll = (id: string) => {
     const element = document.getElementById(id);
@@ -24,11 +20,13 @@ const Navbar = () => {
   };
 
   const toggleDark = () => {
-    const theme = localStorage.getItem("color-theme") as string;
-    themeMode.value = theme === "light" ? "dark" : "light";
+    const theme = layoutState.appTheme;
+    layoutState.appTheme === "light"
+      ? layoutState.setAppTheme("dark")
+      : layoutState.setAppTheme("light");
     if (typeof window !== "undefined") {
       window.localStorage.setItem(
-        "color-theme",
+        LocalStorageKeys.APP_THEME,
         theme === "light" ? "dark" : "light"
       );
 
@@ -39,8 +37,6 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const theme = localStorage.getItem("color-theme") as string;
-    themeMode.value = theme;
     const init = async () => {
       const { Collapse, initTE } = await import("tw-elements");
       initTE({ Collapse }, { allowReinits: true });
@@ -58,11 +54,7 @@ const Navbar = () => {
         <div className="flex w-full flex-wrap items-center justify-between px-6">
           <div className="mx-2">
             <a className="text-xl text-gray-100" href="#">
-              {themeMode.value === "light" ? (
-                <ProfileLogoDark />
-              ) : (
-                <PorofileLogoLight />
-              )}
+              {themeMode === "light" ? <ProfileLogoDark /> : <PorofileLogoLight />}
             </a>
           </div>
           <button
@@ -99,12 +91,11 @@ const Navbar = () => {
               className="list-style-none flex flex-col pl-0 lg:mt-1 lg:flex-row"
               data-te-navbar-nav-ref
             >
-              <li
-                className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
-                data-te-nav-item-ref
-              >
+              <li className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1" data-te-nav-item-ref>
                 <a
-                  className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
+                  className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400
+                  scale-0  hover:scale-75 hover:transition hover:ease-in-out hover:duration-300
+                  "
                   aria-current="page"
                   data-te-nav-link-ref
                   onClick={() => handleClickScroll("profileHeaderId")}
@@ -112,12 +103,9 @@ const Navbar = () => {
                   About
                 </a>
               </li>
-              <li
-                className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
-                data-te-nav-item-ref
-              >
+              <li className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1" data-te-nav-item-ref>
                 <a
-                  className="active disabled:text-black/30 lg:px-2 dark:[&.active]:text-gray-400"
+                  className="p-0 text-gray-500 transition duration-200 hover:text-gray-700 hover:ease-in-out focus:text-gray-700 disabled:text-black/30 motion-reduce:transition-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
                   aria-current="page"
                   data-te-nav-link-ref
                   onClick={() => handleClickScroll("skillId")}
@@ -125,38 +113,32 @@ const Navbar = () => {
                   Skills
                 </a>
               </li>
-              <li
-                className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
-                data-te-nav-item-ref
-              >
+              <li className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
                 <a
                   className="p-0 text-gray-500 transition duration-200 hover:text-gray-700 hover:ease-in-out focus:text-gray-700 disabled:text-black/30 motion-reduce:transition-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
                   onClick={() => handleClickScroll("experinceId")}
                   data-te-nav-link-ref
+                  aria-current="page"
                 >
                   Work
                 </a>
               </li>
-              <li
-                className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
-                data-te-nav-item-ref
-              >
+              <li className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
                 <a
                   className="p-0 text-gray-500 transition duration-200 hover:text-gray-700 hover:ease-in-out focus:text-gray-700 disabled:text-black/30 motion-reduce:transition-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
                   onClick={() => handleClickScroll("testimonialId")}
                   data-te-nav-link-ref
+                  aria-current="page"
                 >
                   Testimonial
                 </a>
               </li>
-              <li
-                className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
-                data-te-nav-item-ref
-              >
+              <li className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
                 <a
                   className="p-0 text-gray-500 transition duration-200 hover:text-gray-700 hover:ease-in-out focus:text-gray-700 disabled:text-black/30 motion-reduce:transition-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-gray-400"
                   onClick={() => handleClickScroll("contactId")}
                   data-te-nav-link-ref
+                  aria-current="page"
                 >
                   Contact
                 </a>
@@ -166,13 +148,12 @@ const Navbar = () => {
               className="md:mx-4 sm:my-2 sm:mx-0 cursor-pointer"
               onClick={toggleDark}
             >
-              {themeMode.value === "light" ? <BiMoon /> : <BiSun />}
+              {layoutState.appTheme === "light" ? <BiMoon /> : <BiSun />}
             </div>
-            <button
-              className="inline-block rounded bg-gray-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-gray-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:bg-gray-100 dark:text-gray-900 dark:shadow-[0_4px_9px_-4px_#030202] dark:hover:bg-gray-600 dark:hover:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:focus:bg-gray-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:active:bg-gray-900 dark:active:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)]"
-              onClick={downloadPdfCv}
-            >
-              Download CV
+            <button className="inline-block rounded bg-gray-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-gray-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:bg-gray-100 dark:text-gray-900 dark:shadow-[0_4px_9px_-4px_#030202] dark:hover:bg-gray-600 dark:hover:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:focus:bg-gray-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:active:bg-gray-900 dark:active:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)]">
+              <Link href={"./pdf/ahmed_hassan_cv.pdf"} download target="_blank">
+                Download CV
+              </Link>
             </button>
           </div>
         </div>

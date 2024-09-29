@@ -6,7 +6,7 @@ function ProfileLogoDark() {
       width="92"
       height="27"
       viewBox="0 0 92 27"
-      fill="none"
+      fillRule="nonzero"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
