@@ -20,7 +20,7 @@ interface ILayoutActions {
 /** @description main app auth store to get and set auth state for hr app  */
 export const useLayoutStore = create(
   persist<ILayoutState & ILayoutActions>(
-    (set, get) => ({
+    set => ({
       showFooter: true,
       showHeader: true,
       appTheme:
