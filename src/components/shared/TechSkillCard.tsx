@@ -50,11 +50,7 @@ const TechSkillCard = () => {
             </h6>
           </div>
           <div className="col-span-1 flex flex-col justify-center items-center w-[100%] h-auto self-center">
-            <Image
-              src={angularIcon}
-              alt="angular"
-              className="w-[84px] h-[84px]"
-            />
+            <Image src={angularIcon} alt="angular" className="w-[84px] h-[84px]" />
             <h6 className="m-0 text-sm font-light text-gray-600 dark:text-gray-100 ">
               Angular
             </h6>

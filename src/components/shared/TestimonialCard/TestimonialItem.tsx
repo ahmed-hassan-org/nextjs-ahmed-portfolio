@@ -15,8 +15,8 @@ const TestimonialItem = ({ imageId = 1 }: Props) => {
         />
       </div>
       <p className="mb-4 mt-3 text-base sm:text-sm sm:text-justify text-gray-600 dark:text-gray-200">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
+        Some quick example text to build on the card title and make up the bulk of
+        the card's content.
       </p>
     </div>
   );

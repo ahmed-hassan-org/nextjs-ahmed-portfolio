@@ -1,18 +1,17 @@
-import Providers from "@/providers/Providers";
-import "@/styles/globals.scss";
-import "swiper/css";
-import "swiper/css/navigation";
-import "react-toastify/dist/ReactToastify.css";
-import "tw-elements/dist/css/tw-elements.min.css";
-import type { AppProps } from "next/app";
-import { ToastContainer } from "react-toastify";
-import { appWithTranslation } from "next-i18next";
-import { useEffect } from "react";
 import {
   LocalStorageKeys,
   SupportedTheme,
 } from "@/core/model/LocalStorageKeys.enum";
 import { useLayoutStore } from "@/stores/LayoutStore";
+import "@/styles/globals.scss";
+import { appWithTranslation } from "next-i18next";
+import type { AppProps } from "next/app";
+import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "tw-elements/dist/css/tw-elements.min.css";
 function App({ Component, pageProps }: AppProps) {
   const layoutState = useLayoutStore();
 
@@ -38,12 +37,10 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <main suppressHydrationWarning>
-      <Providers>
-        <div className="flex flex-col min-h-screen w-full bg-gray text-gray-950 dark:bg-gray-800 dark:text-amber-500">
-          <Component {...pageProps} />
-          <ToastContainer />
-        </div>
-      </Providers>
+      <div className="flex flex-col min-h-screen w-full bg-gray text-gray-950 dark:bg-gray-800 dark:text-amber-500">
+        <Component {...pageProps} />
+        <ToastContainer />
+      </div>
     </main>
   );
 }
