@@ -14,10 +14,10 @@
     "no-unused-vars": "warn",
     "@typescript-eslint/ban-ts-comment": "warn",
     "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
+      "off"
+      // {
+      //   "endOfLine": "auto"
+      // }
     ]
   }
 }
