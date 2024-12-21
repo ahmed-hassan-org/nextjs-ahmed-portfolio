@@ -14,7 +14,7 @@ interface IUserDataState {
       userId: number;
       accessToken: string;
       name: string;
-    } | null
+    } | null,
   ) => void;
 }
 
@@ -32,6 +32,6 @@ export const useUserDataStore = create<IUserDataState>()(
     }),
     {
       name: "userData", // name of the item in the storage (must be unique)
-    }
-  )
+    },
+  ),
 );

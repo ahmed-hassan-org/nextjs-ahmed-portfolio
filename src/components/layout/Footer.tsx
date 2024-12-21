@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BiLogoGithub,
-  BiLogoFacebook,
-  BiLogoLinkedinSquare,
-} from "react-icons/bi";
+import { BiLogoGithub, BiLogoFacebook, BiLogoLinkedinSquare } from "react-icons/bi";
 const Footer = () => {
   return (
     <footer className="bg-white text-center text-gray-600 dark:bg-gray-900 dark:text-gray-200 lg:text-left">
@@ -13,16 +9,10 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-center">
-          <a
-            href="#!"
-            className="mr-6 text-gray-600 dark:text-gray-200 text-xl"
-          >
+          <a href="#!" className="mr-6 text-gray-600 dark:text-gray-200 text-xl">
             <BiLogoFacebook />
           </a>
-          <a
-            href="#!"
-            className="mr-6 text-gray-600 dark:text-gray-200 text-xl"
-          >
+          <a href="#!" className="mr-6 text-gray-600 dark:text-gray-200 text-xl">
             <BiLogoLinkedinSquare />
           </a>
           <a href="#!" className="text-gray-600 dark:text-gray-200 text-xl">

@@ -21,10 +21,7 @@ const ExperinceCard = () => {
       {experinceData &&
         experinceData.map(ele => (
           <div className="col-span-full" key={ele.id}>
-            <ExperinceItemCard
-              experinceItem={ele}
-              key={ele.id}
-            ></ExperinceItemCard>
+            <ExperinceItemCard experinceItem={ele} key={ele.id}></ExperinceItemCard>
           </div>
         ))}
     </section>

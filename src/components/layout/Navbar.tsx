@@ -27,7 +27,7 @@ const Navbar = () => {
     if (typeof window !== "undefined") {
       window.localStorage.setItem(
         LocalStorageKeys.APP_THEME,
-        theme === "light" ? "dark" : "light"
+        theme === "light" ? "dark" : "light",
       );
 
       theme === "dark"

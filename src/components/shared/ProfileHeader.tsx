@@ -23,13 +23,12 @@ const ProfileHeader = () => {
           </h1>
           <p className=" mt-2 font-light text-gray-900 dark:text-gray-200 text-base sm:text-xs">
             I'm a Software Engineer based in Dubai & Qatar ☀️. I describe myself as a
-            passionate developer who loves coding, open source, and the web
-            platform ❤️.I teach my self front end technologies and i prefer to
-            use Angular as primary framework in work and then react,
-            react-native or flutter, i like to learn new technologie and have a
-            deep knowledge in my fied, also i have a good experinses in database
-            and sql and backend using nodejs express , nestjs , java spring boot
-            and python for web and data analysis
+            passionate developer who loves coding, open source, and the web platform
+            ❤️.I teach my self front end technologies and i prefer to use Angular as
+            primary framework in work and then react, react-native or flutter, i like
+            to learn new technologie and have a deep knowledge in my fied, also i
+            have a good experinses in database and sql and backend using nodejs
+            express , nestjs , java spring boot and python for web and data analysis
           </p>
           <div className="address-section my-5 flex flex-col">
             <div className="location-item flex flex-row w-2/4 flex-1">

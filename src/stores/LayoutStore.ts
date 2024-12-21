@@ -39,6 +39,6 @@ export const useLayoutStore = create(
     {
       name: "portfolio-layout-state",
       storage: createJSONStorage(() => localStorage),
-    }
-  )
+    },
+  ),
 );

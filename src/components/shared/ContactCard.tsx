@@ -35,8 +35,8 @@ const ContactCard = () => {
       </div>
       <div className="col-span-4 flex flex-row justify-center items-center my-2">
         <p className="text-center text-sm sm:text-xs sm:text-center font-light text-gray-600 dark:text-gray-300">
-          What's next? Feel free to reach out to me if you're looking for <br />
-          a developer, have a query, or simply want to connect.
+          What's next? Feel free to reach out to me if you're looking for <br />a
+          developer, have a query, or simply want to connect.
         </p>
       </div>
       <div className="col-span-4 my-4">

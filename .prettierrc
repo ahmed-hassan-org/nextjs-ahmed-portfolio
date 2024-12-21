@@ -1,6 +1,6 @@
 {
   "singleQuote": false,
-  "trailingComma": "es5",
+  "trailingComma": "all",
   "arrowParens": "avoid",
   "proseWrap": "preserve",
   "quoteProps": "as-needed",

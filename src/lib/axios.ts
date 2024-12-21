@@ -20,5 +20,5 @@ axios.interceptors.response.use(
   },
   error => {
     throw error;
-  }
+  },
 );
