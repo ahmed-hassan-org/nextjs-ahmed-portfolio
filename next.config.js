@@ -27,6 +27,9 @@ const nextConfig = {
       "localhost:3000/public",
     ],
   },
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname,
+  },
 };
 
 module.exports = nextConfig;

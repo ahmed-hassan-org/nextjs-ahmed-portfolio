@@ -52,13 +52,13 @@ const ProfileHeader = () => {
           <div className="social-section md:mt-4 sm:mb-3">
             <div className="flex flex-row">
               <span className=" text-2xl sm:text-lg">
-                <BiLogoGithub className="text-gray-900 dark:text-gray-300" />
+                <BiLogoGithub className="text-gray-900 dark:text-gray-300 hover:scale-110" />
               </span>
               <span className="mx-3 text-2xl sm:text-lg">
-                <BiLogoTwitter className="text-gray-900 dark:text-gray-300" />
+                <BiLogoTwitter className="text-gray-900 dark:text-gray-300 hover:scale-110" />
               </span>
               <span className="text-2xl sm:text-lg">
-                <BiLogoLinkedin className="text-gray-900 dark:text-gray-300" />
+                <BiLogoLinkedin className="text-gray-900 dark:text-gray-300 hover:scale-110" />
               </span>
             </div>
           </div>
